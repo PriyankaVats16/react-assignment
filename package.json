@@ -5,19 +5,31 @@
   "keywords": ["react", "starter"],
   "main": "src/index.js",
   "dependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-scripts": "4.0.0"
+    "@testing-library/dom": "8.11.1",
+    "@testing-library/react": "12.1.2",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.6",
+    "jest": "27.4.5",
+    "jest-enzyme": "7.1.2",
+    "jest-mock": "27.4.2",
+    "lodash": "4.17.21",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-scripts": "4.0.0",
+    "react-test-renderer": "17.0.2"
   },
   "devDependencies": {
-    "@babel/runtime": "7.13.8",
     "typescript": "4.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "CI=false react-scripts test --env=jsdom -- --updateSnapshot",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "setupFiles": ["./src/setupTests.js"]
   },
   "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
