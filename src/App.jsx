@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 import TodoFind from "./components/todoFind";
 import TodoForm from "./components/todoForm";
@@ -8,7 +8,7 @@ export default function App() {
   const [todos, setTodos] = useState([]);
   const [term, setTerm] = useState("");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const json = localStorage.getItem("todos");
     const loadedTodos = JSON.parse(json);
     if (loadedTodos) {
@@ -16,7 +16,7 @@ export default function App() {
     }
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const json = JSON.stringify(todos);
     localStorage.setItem("todos", json);
   }, [todos]);

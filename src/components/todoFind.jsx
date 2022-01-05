@@ -3,15 +3,9 @@ const TodoFind = ({ onSearchChange, term }) => {
     onSearchChange(e.currentTarget.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input placeholder="Search..." onChange={handleChange} value={term} />
-      </form>
+      <input placeholder="Search..." onChange={handleChange} value={term} />
     </div>
   );
 };

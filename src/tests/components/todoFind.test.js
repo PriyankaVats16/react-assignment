@@ -9,7 +9,7 @@ describe("TodoFind", () => {
   it("should render correctly with no props", () => {
     const component = shallow(<TodoFind />);
     expect(component).toHaveLength(1);
-    expect(component.find("form")).toHaveLength(1);
+    expect(component.find("div")).toHaveLength(1);
   });
   it("should search for correct value", () => {
     const props = { onSearchChange: jest.fn() };
@@ -19,7 +19,6 @@ describe("TodoFind", () => {
       preventDefault: () => null
     });
     component.update();
-    component.find("form").invoke("onSubmit")({ preventDefault: () => null });
     expect(props.onSearchChange).toHaveBeenCalled();
     expect(props.onSearchChange).toHaveBeenCalledWith("abc");
   });
