@@ -17,11 +17,20 @@ const TodoItem = ({ todo, removeTodo, updatedTodos }) => {
       )}
       <div className="todo-actions">
         {todo.id === todoEditing ? (
-          <button onClick={() => handleEditSubmit(todo.id)}>Submit Edit</button>
+          <button
+            id="submit-edit-button"
+            onClick={() => handleEditSubmit(todo.id)}
+          >
+            Submit Edit
+          </button>
         ) : (
-          <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
+          <button id="edit-button" onClick={() => setTodoEditing(todo.id)}>
+            Edit
+          </button>
         )}
-        <button onClick={() => removeTodo(todo.id)}>Delete</button>
+        <button id="delete-button" onClick={() => removeTodo(todo.id)}>
+          Delete
+        </button>
       </div>
     </div>
   );
