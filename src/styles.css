@@ -1,45 +1,59 @@
-.App {
+.todo-list {
   text-align: center;
-}
-
-.App .item-todo {
-  padding: 14px;
+  text-align: center;
   width: 250px;
   margin: 0 auto;
+}
+.todo-list * {
+  box-sizing: border-box;
+}
+.todo-list .item-todo {
+  padding: 13px;
+  margin: 10px auto;
   text-align: left;
   margin-top: 15px;
-  background: linear-gradient(
-    90deg,
-    rgb(12, 89, 255) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
-  color: #fff;
+  background: #ececec;
+  color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
-.App input {
+.input-container {
+  display: flex;
+}
+.todo-list input {
   padding: 14px 32px 14px 16px;
+  width: 100%;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
-  outline: none;
+  border: 1px solid #ececec;
   background: transparent;
 }
+.todo-list .add-item {
+  width: calc(100% - 60px);
+}
+.todo-list .edit-item {
+  padding: 5px 8px;
+  border-color: #444;
+}
 
-.App button {
+.todo-list button {
   padding: 16px 7px;
   border: none;
+  width: 60px;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-  outline: none;
-  background: linear-gradient(
-    90deg,
-    rgba(93, 144, 255, 1) 0%,
-    rgba(122, 0, 250, 1) 100%
-  );
-  color: #fff;
+  background: #ececec;
+  color: #000;
   text-transform: capitalize;
+}
+#submit-edit-button,
+#delete-button {
+  background-color: #0971f1;
+  border-radius: 3px;
+  margin: 8px 0;
+  color: #fff;
+  width: 45%;
+  padding: 4px;
 }
 
 .todo-actions {

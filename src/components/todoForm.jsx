@@ -14,8 +14,13 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input placeholder="Type..." onChange={handleChange} value={userInput} />
+    <form className="input-container" onSubmit={handleSubmit}>
+      <input
+        className="add-item"
+        placeholder="Type..."
+        onChange={handleChange}
+        value={userInput}
+      />
       <button>Add</button>
     </form>
   );

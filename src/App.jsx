@@ -65,7 +65,7 @@ export default function App() {
   console.log(visibleElement.length);
 
   return (
-    <div className="App">
+    <div className="todo-list">
       <div>
         <h1>ToDo List</h1>
 
